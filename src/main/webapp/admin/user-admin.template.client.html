@@ -2,6 +2,14 @@
 <head>
 <title>User Admin</title>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+
+<script
+  src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script src="../services/user.service.client.js"></script>
+<script src="user-admin.component.client.js"></script>
+
+
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js">
 </script>
 </head>
@@ -19,9 +27,9 @@
         <th>&nbsp;</th>
       </tr>
       <tr>
-        <th><input class="form-control" placeholder="username" /></th>
+        <th><input id="usernameFld" class="form-control" placeholder="username" /></th>
         <th><input class="form-control" placeholder="password" /></th>
-        <th><input class="form-control" placeholder="first name" /></th>
+        <th><input id="firstNameFld" class="form-control" placeholder="first name" /></th>
         <th><input class="form-control" placeholder="last name" /></th>
         <th><select class="form-control"><option>Faculty</option>
             <option>Student</option>
@@ -30,27 +38,19 @@
         <th><button class="btn btn-primary">Update</button>
           <button class="btn btn-success">Create</button></th>
       </tr>
-      <tr>
-        <td>alice</td>
+      <tr class="wbdv-template">
+        <td class="username"></td>
         <td>****</td>
-        <td>Alice</td>
-        <td>Wonderland</td>
+        <td class="firstName"></td>
+        <td class="lastName"></td>
         <td>Faculty</td>
         <td>11/22/1968</td>
-        <td><button class="btn btn-danger">Delete</button>
-          <button class="btn btn-info">Edit</button></td>
-      </tr>
-      <tr>
-        <td>bob</td>
-        <td>****</td>
-        <td>Bob</td>
-        <td>Marley</td>
-        <td>Student</td>
-        <td>10/12/1982</td>
-        <td><button class="btn btn-danger">Delete</button>
+        <td><button id="removeBtn" class="btn btn-danger">Delete</button>
           <button class="btn btn-info">Edit</button></td>
       </tr>
     </thead>
+    <tbody>
+    </tbody>
   </table>
   </div>
 </body>
