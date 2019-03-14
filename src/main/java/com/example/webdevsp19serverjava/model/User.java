@@ -1,15 +1,19 @@
 package com.example.webdevsp19serverjava.model;
 
+import java.util.List;
+
 public class User {
 	private Integer id;
 	private String username;
 	private String password;
 	private String firstName;
 	private String lastName;
+	private List<Course> authoredCourses;
 	public User() {}
-	public User(int id, String username, String firstName, String lastName) {
+	public User(int id, String username, String password, String firstName, String lastName) {
 		this.id = id;
-		this.username = username;
+        this.password = password;
+        this.username = username;
 		this.firstName = firstName;
 		this.lastName = lastName;
 	}
